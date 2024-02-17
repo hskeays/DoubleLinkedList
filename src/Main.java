@@ -1,5 +1,15 @@
+import java.util.Arrays;
+import java.util.LinkedList;
+
 class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        LinkedList<Integer> linkedList = new LinkedList<>();
+
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7};
+        for (int num : numbers) {
+            linkedList.add(num);
+        }
+        System.out.println(linkedList);
+
     }
 }
