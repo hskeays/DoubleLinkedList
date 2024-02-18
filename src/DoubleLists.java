@@ -4,19 +4,16 @@ public class DoubleLists {
     public void addToHead(int element) {
         // Create a new node n with the specified element.
         Node n = new Node(element);
-
         // Set the next reference of the new node n to the current head,
         // effectively making the new node the new head.
         n.next = head;
         // Set the prev reference of the new node n to null because it is now the head.
         n.prev = null;
-
         // If the current head is not null (meaning the list was not empty),
         // set the prev reference of the existing head to the new node n.
         if (head != null) {
             head.prev = n;
         }
-
         // Update the head reference to point to the new node n.
         head = n;
     }
@@ -32,13 +29,11 @@ public class DoubleLists {
             head = n;
             return;
         }
-
         // If the list is not empty, traverse the list starting from the head to find the current tail.
         // This is done in the while loop, which stops when it reaches the end of the list.
         while (end.next != null) {
             end = end.next;
         }
-
         // Set the next reference of the new node n to null, indicating that it is the last node in the list.
         n.next = null;
         // Set the prev reference of the new node n to the current tail (the last node before adding the new one).
